@@ -144,28 +144,36 @@ class PersonTimer {
     return `${value} segundos`;
   }
 
+
   start() {
     if (this.interval) return;
+    // Si estaba pausado, continuar desde el tiempo guardado
     this.startTimestamp = Date.now() - (this.time * 1000);
     this.interval = setInterval(() => {
-      // Calcular segundos con decimales
+      // Calcular segundos con decimales solo mientras está corriendo
       const now = Date.now();
       this.time = (now - this.startTimestamp) / 1000;
       this.timerDisplay.textContent = this.formatTimeSeconds(this.time);
     }, 50);
     this.startBtn.disabled = true;
     this.pauseBtn.disabled = false;
+    this.isPaused = false;
   }
 
   pause() {
-    clearInterval(this.interval);
-    this.interval = null;
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = null;
+      // Ajustar this.time a los segundos exactos al pausar
+      if (this.startTimestamp) {
+        this.time = (Date.now() - this.startTimestamp) / 1000;
+      }
+    }
     this.startBtn.disabled = false;
     this.pauseBtn.disabled = true;
-    // Ajustar this.time a los segundos exactos al pausar
-    if (this.startTimestamp) {
-      this.time = (Date.now() - this.startTimestamp) / 1000;
-    }
+    this.isPaused = true;
+    // Mostrar el tiempo fijo al pausar
+    this.timerDisplay.textContent = this.formatTimeSeconds(this.time);
   }
 
   reset() {
