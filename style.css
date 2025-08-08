@@ -1,3 +1,60 @@
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    margin: 16px 1vw;
+    padding: 18px 4vw 16px 4vw;
+    border-radius: 10px;
+  }
+  .main-nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0 8px 0;
+    border-radius: 0 0 10px 10px;
+  }
+  .user-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+  #addPersonBtn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  #peopleList {
+    gap: 10px;
+  }
+  .person-timer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 6px;
+  }
+  .person-title, .timer-display {
+    min-width: unset;
+    text-align: left;
+    font-size: 1rem;
+  }
+  .timer-display {
+    font-size: 1.1rem;
+  }
+  .person-timer button {
+    width: 100%;
+    margin: 0 0 6px 0;
+    font-size: 0.98rem;
+    padding: 8px 0;
+  }
+  .person-timer button:last-child {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
 /* NAVBAR */
 .main-nav {
   display: flex;

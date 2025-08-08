@@ -131,15 +131,9 @@ class PersonTimer {
     return `${min}:${sec}`;
   }
 
-  // Formato requerido: 12,998 segundos
   formatTimeSeconds(seconds) {
-    // Si tienes milisegundos, usa this.time como float, si no, solo segundos
-    // Aquí this.time es entero, pero podrías adaptarlo si usas milisegundos
-    // Para ahora, agrego 3 decimales fijos
     let value = Number(seconds).toFixed(3);
-    // Cambiar punto decimal por coma
     value = value.replace('.', ',');
-    // Agregar separador de miles si es necesario
     value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     return `${value} segundos`;
   }
