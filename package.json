@@ -1,0 +1,11 @@
+{
+  "name": "cronometro",
+  "version": "1.0.0",
+  "description": "e",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

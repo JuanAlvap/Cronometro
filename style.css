@@ -1,0 +1,121 @@
+/* NAVBAR */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  background: #2563eb;
+  padding: 18px 0 12px 0;
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 24px;
+}
+.user-btn {
+  background: #fff;
+  color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+}
+.user-btn.active, .user-btn:hover {
+  background: #4f8cff;
+  color: #fff;
+}
+body {
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px 24px 24px;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3a4a;
+  margin-bottom: 32px;
+}
+
+#addPersonBtn {
+  display: block;
+  margin: 0 auto 32px auto;
+  padding: 12px 28px;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#addPersonBtn:hover {
+  background: #2563eb;
+}
+
+#peopleList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.person-timer {
+  display: flex;
+  align-items: center;
+  background: #f0f4ff;
+  border-radius: 10px;
+  padding: 16px 12px;
+  box-shadow: 0 2px 8px rgba(79,140,255,0.07);
+  gap: 12px;
+}
+
+.person-title {
+  font-weight: 600;
+  color: #2563eb;
+  min-width: 90px;
+}
+
+.timer-display {
+  font-size: 1.3rem;
+  font-family: 'Roboto Mono', monospace;
+  color: #2d3a4a;
+  min-width: 70px;
+}
+
+.person-timer button {
+  margin-left: 4px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #e0e7ff;
+  color: #2d3a4a;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.person-timer button:hover {
+  background: #4f8cff;
+  color: #fff;
+}
+.person-timer button:disabled {
+  background: #e5e7eb;
+  color: #a1a1aa;
+  cursor: not-allowed;
+}
+.person-timer button:last-child {
+  background: #ff4f4f;
+  color: #fff;
+  margin-left: 12px;
+}
+.person-timer button:last-child:hover {
+  background: #d90429;
+}
