@@ -69,7 +69,7 @@ class PersonTimer {
         throw new Error('Respuesta inesperada del servidor: ' + result);
       }
     } catch (error) {
-      alert('❌ Error al enviar los datos a Google Sheets. Verifica la configuración del script.');
+      //alert('❌ Error al enviar los datos a Google Sheets. Verifica la configuración del script.');
       this.finishBtn.textContent = 'Finalizar';
       this.finishBtn.disabled = false;
       return;
