@@ -50,7 +50,7 @@ class PersonTimer {
     this.finishBtn.disabled = true;
 
     try {
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxxwbntdAFImZ2klAGxQVOBgzdgo02bgWImufDSfqQtx_UGXjZ4s-5tGgfgZKa-wPc2SA/exec';
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5UEPoEBpewVhHHRJ8dz9du5nD7LECl3Pd3Tti1xefARPWieA7wzSomVEaX8GgSK_fcg/exec';
 
       const formData = new FormData();
       formData.append('action', 'addData');
